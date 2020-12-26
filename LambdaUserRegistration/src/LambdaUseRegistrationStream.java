@@ -1,11 +1,11 @@
-import java.util.Arrays;
+ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 
-public class LambdaUseRegistration {
+public class LambdaUseRegistrationStream {
 
 	public static void main(String[] args) {
 		

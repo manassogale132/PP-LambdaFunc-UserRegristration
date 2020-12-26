@@ -1,7 +1,7 @@
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
-public class LambdaUseRegistration {
+public class LambdaUserRegistration {
 
 	public static void main(String[] args) {
 	

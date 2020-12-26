@@ -2,10 +2,11 @@
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
-public class LambdaUseRegistrationStream {
+public class LambdaUserRegistrationUsingStream {
 
 	public static void main(String[] args) {
 		
@@ -14,28 +15,32 @@ public class LambdaUseRegistrationStream {
 		
 		Predicate<String> pattern = Pattern.compile("[A-Z]{1}[a-z]{1,7}").asPredicate();
 		
-		Stream<String> matchedFirstName = firstName.stream().filter(pattern);
+		List<String> matchedFirstName = firstName.stream()
+				                       .filter(pattern)
+				                       .collect(Collectors.toList());   //Using collect instead of forEach
 		
-		matchedFirstName.forEach(n->{
-			System.out.println("Matched FirstName = "+n);
-		});
 		
+			System.out.println("Matched FirstName = "+matchedFirstName);
+		
+	//------------------------------------------------------------------------------------------------------------------------------------------	
 		
 		System.out.println("  ");
 		
 		
 		
-		List<String> lastName = Arrays.asList("sogale","Sogale","Patil","sogalE","632145","s");    // Second Function Last-Name
+		List<String> lastName = Arrays.asList("sogale","Sogale","Patil","sogalE","632145","Smith");    // Second Function Last-Name
 		
 		Predicate<String> pattern2 = Pattern.compile("[A-Z]{1}[a-z]{1,7}").asPredicate();
 		
-		Stream<String> matchedLastName = lastName.stream().filter(pattern2);
+		List<String> matchedLastName = lastName.stream()
+				                       .filter(pattern2)
+				                       .collect(Collectors.toList());	
 		
-		matchedLastName.forEach(n->{
-			System.out.println("Matched LastName = "+n);
-		});
+					System.out.println("Matched LastName = "+matchedLastName);         //Using collect instead of forEach
+	
 		
-		
+	//------------------------------------------------------------------------------------------------------------------------------------------	
+	
 		System.out.println("  ");
 		
 		
@@ -44,13 +49,15 @@ public class LambdaUseRegistrationStream {
 		
 		Predicate<String> pattern3 = Pattern.compile("(.+)@(.+)").asPredicate();
 		
-		Stream<String> matchedEmail = email.stream().filter(pattern3);
+		Stream<String> matchedEmail = email.stream()
+				                      .filter(pattern3);
 		
 		matchedEmail.forEach(n->{
 			System.out.println("Matched EmaidId = "+n);
 		});
 		
-		
+	//------------------------------------------------------------------------------------------------------------------------------------------	
+	
 		System.out.println("  ");
 		
 		
@@ -58,12 +65,15 @@ public class LambdaUseRegistrationStream {
 		
 		Predicate<String> pattern4 = Pattern.compile("[1-9]{2}[ ][0-9]{10}").asPredicate();
 		
-		Stream<String> matchedPhoneNumber = phoneNumber.stream().filter(pattern4);
+		Stream<String> matchedPhoneNumber = phoneNumber.stream()
+				                            .filter(pattern4);
 		
 		matchedPhoneNumber.forEach(n->{
 			System.out.println("Matched PhoneNumber = "+n);
 		});
 		
+   //------------------------------------------------------------------------------------------------------------------------------------------	
+
 		
 		System.out.println("  ");
 		
@@ -72,7 +82,8 @@ public class LambdaUseRegistrationStream {
 		
 		Predicate<String> pattern5 = Pattern.compile("^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$").asPredicate();
 		
-		Stream<String> matchedPassword = password.stream().filter(pattern5);
+		Stream<String> matchedPassword = password.stream()
+				                         .filter(pattern5);
 		
 		matchedPassword.forEach(n->{
 			System.out.println("Matched Password = "+n);

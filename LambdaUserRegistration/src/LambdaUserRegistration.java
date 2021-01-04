@@ -49,22 +49,6 @@ public class LambdaUserRegistration {
 		
 		System.out.println("PhoneNumber Validation = "+result3);
 		
-		
-        System.out.println();
-		
-		
-        String regex4 = "^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$";
-		
-		String password = "maNas321#";                                    //Password
-		 
-		Pattern pattern4 = Pattern.compile(regex4);                       
-		
-		Predicate<String> predicate4 = pattern4.asPredicate();
-		
-		boolean result4 = predicate4.test(password);
-		
-		System.out.println("PhoneNumber Validation = "+result4);
-	}
 
 
 }

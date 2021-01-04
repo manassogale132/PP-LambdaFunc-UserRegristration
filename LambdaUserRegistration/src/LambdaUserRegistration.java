@@ -18,20 +18,6 @@ public class LambdaUserRegistration {
 		System.out.println("FirstName/LastName Validation = "+result1);
 		
 		
-		System.out.println();
-		
-		
-        String regex2 = "(.+)@(.+)";     
-		
-		String email = "manassogale@gmail.com";                             //Email
-		
-		Pattern pattern2 = Pattern.compile(regex2);
-		
-		Predicate<String> predicate2 = pattern2.asPredicate();
-		
-		boolean result2 = predicate2.test(email);
-		
-		System.out.println("Email Validation = "+result2);
 		
 	
 }

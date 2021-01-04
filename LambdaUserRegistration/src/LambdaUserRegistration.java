@@ -33,22 +33,5 @@ public class LambdaUserRegistration {
 		
 		System.out.println("Email Validation = "+result2);
 		
-		
-        System.out.println();
-		
-		
-        String regex3 = "[1-9]{2}[ ][0-9]{10}";
-		
-		String phoneNumber = "91 9632145632";
-		 
-		Pattern pattern3 = Pattern.compile(regex3);                       //PhoneNumber
-		
-		Predicate<String> predicate3 = pattern3.asPredicate();
-		
-		boolean result3 = predicate3.test(phoneNumber);
-		
-		System.out.println("PhoneNumber Validation = "+result3);
-		
-
-
+	
 }

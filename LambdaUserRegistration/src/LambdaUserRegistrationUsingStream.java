@@ -89,6 +89,7 @@ public class LambdaUserRegistrationUsingStream {
 			System.out.println("Matched Password = "+n);
 		});
 		
+
 	}
 	
 

@@ -74,22 +74,6 @@ public class LambdaUserRegistrationUsingStream {
 		
    //------------------------------------------------------------------------------------------------------------------------------------------	
 
-		
-		System.out.println("  ");
-		
-		
-        List<String> password = Arrays.asList("manasS@3","mansa243","MANAS@13","maNas321@","Ma");      // Fifth Function Password
-		
-		Predicate<String> pattern5 = Pattern.compile("^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$").asPredicate();
-		
-		Stream<String> matchedPassword = password.stream()
-				                         .filter(pattern5);
-		
-		matchedPassword.forEach(n->{
-			System.out.println("Matched Password = "+n);
-		});
-		
-	}
 	
 
 }

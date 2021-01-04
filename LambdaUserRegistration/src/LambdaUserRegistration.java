@@ -66,4 +66,5 @@ public class LambdaUserRegistration {
 		System.out.println("PhoneNumber Validation = "+result4);
 	}
 
+
 }
